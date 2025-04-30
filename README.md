@@ -12,7 +12,7 @@
 - - -
 ### Running with Unity
 1) Open Docker Desktop.
-2) Navigate to your folder and open a terminal.
+2) Navigate to the ros2-unity-docker-setup folder and open a terminal.
 3) Type ``` run.bat ```.
 4) Once the container is open, type ``` ros2 run ros_tcp_endpoint default_server_endpoint --ros-args -p ROS_IP:=0.0.0.0 ```
 5) Open the unity project
@@ -28,7 +28,7 @@
 
 ![image](https://github.com/user-attachments/assets/83aae174-3048-441d-a5e8-526b0a62bf2b)
 
-9) Open a second terminal in your folder and type ``` open_terminal.bat ```.
+9) Open a second terminal in ros2-unity-docker-setup and type ``` open_terminal.bat ```.
 10) Once the new terminal is open, run ``` ros2 run turtlebot3_teleop teleop_keyboard ```.
 11) You can now use the following keybinds to move the robot around in unity:
 
