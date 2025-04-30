@@ -28,7 +28,12 @@ COPY ./ros2_docker/source_ros.sh /home/dev_ws/source_ros.sh
 RUN echo "cd /home/dev_ws" >> /root/.bashrc \
     && echo ". install/local_setup.bash" >> /root/.bashrc
 
-# Build the workspace
+# Fix duplicate packages
+RUN touch /usr/src/gtest/COLCON_IGNORE
+RUN touch /usr/src/gmock/COLCON_IGNORE
+
+# Build the workspace (correct build command)
 RUN /bin/bash -c "source /opt/ros/foxy/setup.bash && cd /home/dev_ws && colcon build"
 
-RUN /bin/bash -c "source /home/dev_ws/install/setup.bash && colcon build && /home/dev_ws/source install/setup.bash"
+# (Optional) Source workspace after build — just for next layers
+RUN /bin/bash -c "source /opt/ros/foxy/setup.bash && source /home/dev_ws/install/setup.bash && echo 'Workspace sourced successfully!'"
