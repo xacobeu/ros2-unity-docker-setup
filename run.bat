@@ -1,0 +1,3 @@
+@echo off
+echo Starting container...
+docker run -it --name foxy_unity --rm -p 10000:10000 foxy /bin/bash
