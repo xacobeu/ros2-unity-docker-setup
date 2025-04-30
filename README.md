@@ -5,9 +5,10 @@
 2) Make sure to run the Docker Desktop app before proceeding.
 3) Create a folder to use as workspace and open a terminal there.
 4) Clone the git repo into your folder of choice by doing ``` git clone https://github.com/xacobeu/ros2-unity-docker-setup.git ```.
-5) Then type ``` build.bat ```.
-6) Once its done type ``` run.bat ```.
-7) You can open more terminal windows by running ``` open_terminal.bat ```.
+5) Type ``` cd ros2-unity-docker-setup  ```
+6) Then type ``` build.bat ```.
+7) Once its done type ``` run.bat ```.
+8) You can open more terminal windows by running ``` open_terminal.bat ```.
 - - -
 ### Running with Unity
 1) Open Docker Desktop.
